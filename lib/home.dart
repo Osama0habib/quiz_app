@@ -17,15 +17,30 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Map<String,dynamic>> quizz = [{
     "question" : "what is your favourite pet ?",
-    "answer" : {"text" : "dogs" , "score" : 60},
+    "answer" : [
+      {"text": "dogs", "score": 30},
+      {"text": "Cats", "score": 70},
+      {"text": "turtles", "score": 50},
+    ],
   },{
-    "question" : "what is your favourite pet ?",
-    "answer" : {"text" : "dogs" , "score" : 60},
-  },{}];
+    "question" : "what is your region ?",
+    "answer" : [
+      {"text": "Egypt", "score": 50},
+      {"text": "Usa", "score": 70},
+      {"text": "UAE", "score": 30},
+    ],
+  },{
+    "question" : "what is your Sport ?",
+    "answer" : [
+      {"text": "running", "score": 70},
+      {"text": "Gym", "score": 50},
+      {"text": "Tennis", "score": 30},
+    ],
+  }];
 
   @override
   Widget build(BuildContext context) {
-    print(quizz[0]["answer"]["score"]);
+    print(quizz[0]["answer"]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Quiz App"),
@@ -38,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-             "",
+             quizz[_index]["question"],
               style: const TextStyle(
                 fontSize: 20,
               ),
