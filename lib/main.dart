@@ -1,33 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    // print("${questions[1]}");
     return MaterialApp(
       title: "Quiz App",
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: Scaffold(
-        appBar: AppBar(title: Text("Quiz App"), centerTitle: true),
-        body: Column(
-          children: [
-            Text("Hello ya shbab",
-                style: TextStyle(color: Colors.red, fontSize: 20)),
-            Text("Hello ya shbab",
-                style: TextStyle(color: Colors.blue, fontSize: 16)),
-            Text("Hello ya shbab",
-                style: TextStyle(color: Colors.green, fontSize: 14)),
-          ],
-        ),
-      ),
+      theme: ThemeData(primarySwatch: Colors.red,),
+      home:  HomeScreen(),
     );
   }
+}
+
 
 // This widget is the root of your application.
-
-}
